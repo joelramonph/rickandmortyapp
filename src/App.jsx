@@ -39,6 +39,8 @@ function App() {
   return (
     <div className="App">
 
+<header className='header'>
+
 <h1 className='title'>Rick and Morty</h1>
 <label className='search__text'>Location Search</label>
 
@@ -47,7 +49,10 @@ function App() {
         <button>Search</button>
       </form>
 
-      <LocationInfo location={location} />
+      
+
+</header>
+<LocationInfo location={location} />
 
 
     <div className="container">
