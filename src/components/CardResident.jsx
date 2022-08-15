@@ -3,7 +3,7 @@ import useFetch from '../hooks/useFetch'
 
 const CardResident = ({ url }) => {
 
-  const resident =  useFetch(url)
+const resident =  useFetch(url)
 
   return(
       <article className='cardContainer__resident'>
@@ -11,8 +11,11 @@ const CardResident = ({ url }) => {
         <header>
             <img src={resident?.image} alt={`image of ${resident?.name}`}/>
             <div className='container__status'>
+            
+          
                 <div className="circle"></div>
                 <span className='resident__status'>{resident?.status}</span>
+                
             </div>
         </header>
         <div className='resident__datos'> 
