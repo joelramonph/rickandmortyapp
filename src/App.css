@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 :root{
-    --Very-Dark-Blue: hsl(230, 17%, 14%);
-    --White-Text: hsl(0, 0%, 100%);
-    --Dark-Desaturated-Blue: hsl(228, 28%, 20%);
-    --hover-card: brightness(1.2);
+
+    --body-bg: #05292E;
+    --card-bg: #062226;
+    --white-Text: hsl(0, 0%, 100%);
+    
+    
+    
 }
 
 
@@ -20,15 +25,209 @@ html {
     font-size: 14px;
 }
 img{
-   
-    max-width: 200px;
+    display: block;
+    max-width: 330px;
     margin: 0 auto;
+    
+   
 }
 
+body{
+    font-size: 14px;
+    background-color: var(--body-bg);
+    color: var(--white-Text);
+}
+
+/*App*/
+.App{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 4em;
+}
 .container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 1.8em;
 }
+
+.title{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+    font-family: 'DynaPuff', cursive;
+    font-size: 2.2rem;
+    letter-spacing: 0.1em;
+    padding: 0.5em;
+}
+
+.search__text{
+    display: block;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.1em;
+    opacity: 0.5;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.form__search{
+    width: 100%;
+    max-width: 600px;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+   
+    opacity: 0.9;
+}
+
+.form__search input[type= text], select{
+    width: 70%;
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    border: 2px solid #ccc;
+    display: inline-block;
+    box-sizing: border-box;
+   
+   }
+
+   button{
+    border: 2px solid #ccc;
+}
+
+
+
+/*Location Info*/
+
+.container__location{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    background-color: var(--card-bg);;
+    padding: .5em 1.6em;
+   
+    gap: 1em;
+    margin-top: 2em;
+    border: 1px solid black;
+   
+}
+
+.title__location{
+    font-size: 2em;
+    text-align: center;
+
+}
+
+.list__item-location{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style-type: none;
+}
+
+span{
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+}
+
+/*Card Resident*/
+
+.cardContainer__resident{
+    background-color: var(--card-bg);
+    max-width: 100%;
+    width: 320px;
+    overflow: hidden;
+    gap: 1.4em;
+    text-align: center;
+    margin-top: 2em;
+   
+}
+
+.container__status{
+    position: relative;
+    top: -270px;
+    left: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--card-bg);
+    width: 110px;
+    border-radius: 0 5px 5px 0;
+   
+ 
+
+}
+
+.circle{
+    
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    opacity: 0.7;
+    
+    
+}
+
+.resident__status{
+    /*position: relative;
+    top: -270px;
+    right: 85px;*/
+   /* background-color: var(--card-bg);*/
+    color: var(--white-Text);
+    font-size: 0.8em;
+    font-family: 'Roboto', sans-serif;
+    padding: 0.5em 4em 0.5em 2em;
+    
+}
+
+.resident__datos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
+}
+
+.resident__name{
+    color: white;
+    font-size: 1em;
+    padding: 15px;
+    font-size: 1.5rem;
+    font-family:'Roboto', sans-serif;
+    opacity: 0.7;
+
+}
+
+.card__list-resident{
+   
+    list-style-type: none;
+    padding: 15px;
+    text-align: left;
+    
+}
+
+
+@media (min-width:600px) {
+    .title{
+        font-size: 4rem;
+    }
+    
+}
+
+
+
+
+
+
 

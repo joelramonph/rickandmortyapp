@@ -38,16 +38,19 @@ function App() {
   
   return (
     <div className="App">
-      <div className="container">
 
-      <h1>Rick and Morty</h1>
+<h1 className='title'>Rick and Morty</h1>
+<label className='search__text'>Location Search</label>
 
-<form onSubmit={handleSubmit}>
-  <input id='search' type='text' />
-  <button>Search</button>
-</form>
-<LocationInfo location={location} />
-<div>
+      <form className='form__search'  onSubmit={handleSubmit}>
+        <input id='search' type='text' placeholder="e.g. '1 to 126'" />
+        <button>Search</button>
+      </form>
+
+      <LocationInfo location={location} />
+
+
+    <div className="container">
 
   {
     location?.residents.map(url => (
@@ -59,8 +62,8 @@ function App() {
    
     ))
   }
-</div>
-      </div>
+    </div>
+      
     
      
     </div>
